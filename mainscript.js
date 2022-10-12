@@ -5,7 +5,7 @@ const countDate = new Date('jan 1, 2023 00:00:00').getTime();
 
 function newYear() {
     const nowDate = new Date().getTime();
-    let gap = countDate - nowDate;
+    gap = countDate - nowDate;
     if(gap <= 0) {
         let text = document.getElementById('text');
         text.innerText = " С Новым Годом! ";

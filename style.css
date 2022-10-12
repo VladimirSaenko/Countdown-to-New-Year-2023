@@ -5,46 +5,27 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    user-zoom: fixed;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: #000 url(img/bg.jpg);
-    background-attachment: fixed;
-    background-blend-mode: hard-light;
-    background-size: cover;
-    background-position: center;
-}
-
 .container {
-    position: absolute;
-    top: 80px;
-    left: 100px;
-    right: 100px;
-    bottom: 80px;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5)
-    0 0 0 100px rgba(0, 0, 0, 0.1);
-    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    /* height: 100%; */
+    background: #f7efee;
+}
+
+.container .imgBx {
+    position: relative;
+    height: 100%;
+    /* height: 100vh; */
+    width: 450px;
     background: url(img/bg.jpg);
-}
-
-.container h2 {
-    text-align: center;
-    font-size: 10em;
-    line-height: 0.7em;
-    color: #333;
-    margin-top: -80px;
-}
-
-.container h2 span {
-    display: block;
-    font-weight: bold;
-    letter-spacing: 6px;
-    font-size: 0.2em;
+    background-size: contain;
+    background-position: center;
 }
 
 .container .countdownBx {
@@ -54,6 +35,27 @@ body {
     flex-direction: column;
     width: calc(100% - 450px);
     /* width: calc(550px - 450px); */
+}
+
+.container .countdownBx h2 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 500;
+}
+
+.container .countdownBx h2 span {
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.container .countdownBx h2 span i {
+    font-style: initial;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    /* color: #ff0; */
 }
 
 .container .countdownBx .countdown {
@@ -69,6 +71,7 @@ body {
 .container .countdownBx .countdown div {
     position: relative;
     width: 100px;
+    text-align: center;
     color: rgb(0, 0, 0);
     font-size: 50px;
     font-weight: 500;
@@ -83,9 +86,8 @@ body {
     left: 0;
     width: 100%;
     height: 35px;
-    color: white;
-    text-shadow: 2px 2px black;
-    font-size: 35px;
+    color: red;
+    font-size: 13.5px;
     font-weight: 600;
     line-height: 10px;
     letter-spacing: 2.5px;
@@ -104,12 +106,12 @@ body {
     content: 'minute';
 }
 
-.container .countdownBx .countdown div#second {
-    color: yellow;
-}
-
 .container .countdownBx .countdown div#second::before {
     content: 'seconds';
+}
+
+.container .countdownBx .countdown div#second {
+    color: yellow;
 }
 
 @media (max-width: 991px) {
@@ -128,19 +130,9 @@ body {
 }
 
 @media (max-width: 600px) {
-    .container h2{
-        font-size: 6.1em;
+    .container .countdownBx h2{
+        font-size: 1.1em;
         font-weight: bolder;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container {
-        width: 100vw;
     }
 
     .container .countdownBx .countdown {
@@ -152,27 +144,7 @@ body {
         color: rgb(255, 255, 255);
         text-shadow: black 1px 1px 1px;
         margin: 0;
-        font-size: 25px;
+        font-size: 45px;
         margin-top: -25px;
-    }
-
-    .container .countdownBx .countdown div#day::before {
-        content: 'days';
-        font-size: 16px;
-    }
-    
-    .container .countdownBx .countdown div#hour::before {
-        content: 'hours';
-        font-size: 16px;
-    }
-    
-    .container .countdownBx .countdown div#minute::before {
-        content: 'minute';
-        font-size: 16px;
-    }
-    
-    .container .countdownBx .countdown div#second::before {
-        content: 'seconds';
-        font-size: 16px;
     }
 }
