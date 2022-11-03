@@ -26,6 +26,7 @@
     function newYear() {
         const nowDate = new Date().getTime();
         gap = countDate - nowDate;
+
         if(gap <= 0) {
             let text = document.getElementById('text');
             text.innerText = " С Новым Годом! ";
@@ -34,6 +35,7 @@
             document.getElementById('minute').textContent = "0";
             document.getElementById('second').textContent = "0";
         }
+
         else {
             const second = 1000;
             const minute = second * 60;
@@ -49,6 +51,7 @@
             document.getElementById('second').textContent = s;
         }
     }
+
     setInterval(newYear, 1);
 </script>
 </body>
