@@ -1,4 +1,4 @@
-# Countdown To New Year-2023
+# Countdown to New Year-2023
 
 ## Сайт-отсчет до Нового Года (2023)
 
